@@ -1,0 +1,105 @@
+= Dokumentation Netzwerktechnik Projekt
+Hofer Jakob, Pölderl Laurin, Kraml Friedrich
+:description: Dokumentation NWT-Projekt
+:sectanchors:
+:sectnums:
+:icons: font
+:experimental:
+:sectnums:
+:toc:
+:doctype: book
+:url-repo: https://github.com/SIMULATAN/NWT-Project-2023
+
+* Team:
+
+- Hofer Jakob
+- Pölderl Laurin
+- Kraml Friedrich
+
+* Version: 0.1.0
+
+* Version Date: 06-03-2023
+
+* Version Notes: Start of the Project
+
+* Authors:
+
+** Laurin Pölderl (laurin.poelderl@gmail.com)
+
+= 06.03.2023
+
+___
+
+== Desktop VM:
+
+** CT-ID: 780187
+** Password: bluhh
+
+== Docker VM: Debian
+** Region: Vienna
+** Keymap: German
+** Local: en_GB
+** "Configure Network manually"
+*** IP 10.9.7.180
+*** Gateway: 10.9.7.254
+*** Hostname: 3proj-jfl-docker
+** Root-Pass: jfl187!
+** User:
+*** Username: jfl
+*** Pass: jfl187!
+
+=== Debian Docker VM Setup
+
+** TTY login
+
+==== Name Server
+
+** `vi /etc/resolv.conf`
+** change nameserver to 1.1.1.1 (Cloudflare)
+
+==== sudo setup
+
+** `apt install vim sudo`
+** `usermod -aG sudo jfl`
+** `reboot`
+
+From now on, all configurations will be done over ssh with the jfl user.
+
+==== grub setup
+
+** `vim /etc/default/grub`
+*** quiet von cmd line entfernen
+*** timeout auf 0
+** `grub-mkconfig -o /boot/grub/grub.cfg`
+** `reboot`
+
+==== apt setup
+
+** `EDITOR=vim sudoedit /etc/apt/sources.list`
+** mirror list fixed
+
+==== docker installation
+
+https://docs.docker.com/engine/install/debian/
+
+** `usermod -aG docker jfl`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
