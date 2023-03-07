@@ -84,12 +84,10 @@ https://docs.docker.com/engine/install/debian/
 
 ** `usermod -aG docker jfl`
 
+==== Bridge Setup for Docker
 
-
-
-
-
-
+The bridges are defined as ipvlans in the `docker-compose.yml` file in the docker folder.
+On our machine, that's `/home/jfl/files/docker`.
 
 
 
