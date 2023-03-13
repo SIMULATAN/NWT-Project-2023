@@ -1,6 +1,7 @@
 services:
   dotoneserver:
     image: nginx:alpine
+    restart: unless-stopped
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html
     networks:
