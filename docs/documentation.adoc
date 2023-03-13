@@ -10,17 +10,19 @@ Hofer Jakob, Pölderl Laurin, Kraml Friedrich
 :doctype: book
 :url-repo: https://github.com/SIMULATAN/NWT-Project-2023
 
+Unser Netzwerk ist nur über LAN erreichbar!
+
 * Team:
 
 - Hofer Jakob
 - Pölderl Laurin
 - Kraml Friedrich
 
-* Version: 0.1.0
+* Version: 0.1.1
 
-* Version Date: 06-03-2023
+* Version Date: 13-03-2023
 
-* Version Notes: Start of the Project
+* Version Notes: Weiteres Aufsetzen der Desktop/Docker VM
 
 * Authors:
 
@@ -86,8 +88,41 @@ https://docs.docker.com/engine/install/debian/
 
 ==== Bridge Setup for Docker
 
-The bridges are defined as ipvlans in the `docker-compose.yml` file in the docker folder.
+The bridges are defined as ipvlans in the `docker-compose.yml` file in t he docker folder.
 On our machine, that's `/home/jfl/files/docker`.
+
+= 13.03.2023
+
+== Fortsetzung aufsetzen der Desktop VM
+
+** IP 10.9.7.187
+** Sprache (Keyboard Layout): German
+** Vor/Nachname: JFL
+** Hostname: 3proj-jfl-desktop
+** Passwort: desktop
+
+== Fortsetzung aufsetzen Docker VM
+
+=== Pihole
+
+** Die Konfiguration ist unter `docker/pi-hole/docker-compose.yml` zu finden
+** Passwort: jfl-pihole
+** IP 10.9.7.179
+** Unter `/admin` einsteigen
+*** Settings -> dns -> Haken bei Cloudflare; bei Google raus
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
