@@ -18,24 +18,28 @@ Unser Netzwerk ist nur über LAN erreichbar!
 - Pölderl Laurin
 - Kraml Friedrich
 
-* Version: 0.1.1
+* Version: 1.0.0
 
-* Version Date: 13-03-2023
+* Version Date: 20-03-2023
 
-* Version Notes: Weiteres Aufsetzen der Desktop/Docker VM
+* Version Notes: Aufsetzen der Firewall und Router
 
-* Authors:
+* Author:
 
 ** Laurin Pölderl (laurin.poelderl@gmail.com)
 
-= 06.03.2023
 
 ___
 
-== Desktop VM:
+== Desktop VM
 
 ** CT-ID: 780187
 ** Password: bluhh
+** IP 10.9.7.187
+** Sprache (Keyboard Layout): German
+** Vor/Nachname: JFL
+** Hostname: 3proj-jfl-desktop
+** Passwort: desktop
 
 == Docker VM: Debian
 ** Region: Vienna
@@ -91,18 +95,6 @@ https://docs.docker.com/engine/install/debian/
 The bridges are defined as ipvlans in the `docker-compose.yml` file in t he docker folder.
 On our machine, that's `/home/jfl/files/docker`.
 
-= 13.03.2023
-
-== Fortsetzung aufsetzen der Desktop VM
-
-** IP 10.9.7.187
-** Sprache (Keyboard Layout): German
-** Vor/Nachname: JFL
-** Hostname: 3proj-jfl-desktop
-** Passwort: desktop
-
-== Fortsetzung aufsetzen Docker VM
-
 === Pihole
 
 ** Die Konfiguration ist unter `docker/pi-hole/docker-compose.yml` zu finden
@@ -110,6 +102,19 @@ On our machine, that's `/home/jfl/files/docker`.
 ** IP 10.9.7.179
 ** Unter `/admin` einsteigen
 *** Settings -> dns -> Haken bei Cloudflare; bei Google raus
+
+== Firewall VM
+
+** Name: 3proj-jfl-firewall
+** ISO Image: OPNsense-23.1-OpenSSL-dvd-amd64.iso
+
+== Router
+
+** Name: 3proj-jfl-router
+** Passwort: router
+
+
+
 
 
 
