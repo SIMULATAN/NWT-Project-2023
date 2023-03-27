@@ -9,6 +9,7 @@ Hofer Jakob, Pölderl Laurin, Kraml Friedrich
 :toc:
 :doctype: book
 :url-repo: https://github.com/SIMULATAN/NWT-Project-2023
+:imagesdir: ../img
 
 Unser Netzwerk ist nur über LAN erreichbar!
 
@@ -18,11 +19,11 @@ Unser Netzwerk ist nur über LAN erreichbar!
 - Pölderl Laurin
 - Kraml Friedrich
 
-* Version: 1.0.0
+* Version: 1.0.1
 
-* Version Date: 20-03-2023
+* Version Date: 27-03-2023
 
-* Version Notes: Aufsetzen der Firewall und Router
+* Version Notes: Aufsetzen des Routers
 
 * Author:
 
@@ -111,7 +112,16 @@ On our machine, that's `/home/jfl/files/docker`.
 == Router
 
 ** Name: 3proj-jfl-router
+** username: root
 ** Passwort: router
+
+image:config1.png[]
+image:config2.png[]
+image:ping1.png[]
+image:ping2.png[]
+image:ping3.png[]
+
+
 
 
 
