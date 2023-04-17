@@ -19,11 +19,11 @@ Unser Netzwerk ist nur über LAN erreichbar!
 - Pölderl Laurin
 - Kraml Friedrich
 
-* Version: 1.0.1
+* Version: 1.0.2
 
-* Version Date: 27-03-2023
+* Version Date: 17-04-2023
 
-* Version Notes: Aufsetzen des Routers
+* Version Notes: Aufsetzen der Firewall
 
 * Author:
 
@@ -31,6 +31,8 @@ Unser Netzwerk ist nur über LAN erreichbar!
 
 
 ___
+
+** Subnet Bit Count: 28
 
 == Desktop VM
 
@@ -104,12 +106,7 @@ On our machine, that's `/home/jfl/files/docker`.
 ** Unter `/admin` einsteigen
 *** Settings -> dns -> Haken bei Cloudflare; bei Google raus
 
-== Firewall VM
-
-** Name: 3proj-jfl-firewall
-** ISO Image: OPNsense-23.1-OpenSSL-dvd-amd64.iso
-
-== Router
+== Router (später ersetzt durch die Firewall)
 
 ** Name: 3proj-jfl-router
 ** username: root
@@ -120,6 +117,39 @@ image:config2.png[]
 image:ping1.png[]
 image:ping2.png[]
 image:ping3.png[]
+
+== Firewall VM
+
+** Name: 3proj-jfl-firewall
+** ISO Image: OPNsense-23.1-OpenSSL-dvd-amd64.iso
+** Login für die Installation:
+*** user: installer
+*** password: opnsense
+** Install UFS
+** da0 - Harddisk 15gb
+
+=== Nach der Installation:
+** user: root
+** password: firewall
+** IP-Address (manuel): 10.9.7.178
+** subnet bit count: 28
+** No WAN, no LAN
+** don't change https to http
+** generate a new self-signed certificate
+** don't reset GUI defaults
+
+image:configFirewallNetwork.png[]
+WICHTIG: das Interface muss 2 mal hinzugefügt werden!
+
+=== installation WAN
+** no DHCP
+** IP-Address: 10.9.7.244
+** WAN IPv4 upstream gateway address: 10.9.7.254
+** no name server
+** IPv4 name Server: 1.1.1.1
+** don't change https to http
+** don't generate a new self-signed certificate
+** don't reset GUI defaults
 
 
 
