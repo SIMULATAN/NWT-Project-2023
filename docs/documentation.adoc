@@ -19,11 +19,11 @@ Unser Netzwerk ist nur über LAN erreichbar!
 - Pölderl Laurin
 - Kraml Friedrich
 
-* Version: 1.0.2
+* Version: 1.0.3
 
-* Version Date: 17-04-2023
+* Version Date: 22-05-2023
 
-* Version Notes: Aufsetzen der Firewall
+* Version Notes: Bearbeiten der Firewall (Fehlersuche)
 
 * Author:
 
@@ -112,8 +112,13 @@ On our machine, that's `/home/jfl/files/docker`.
 ** username: root
 ** Passwort: router
 
+=== Einstellungen Network Device
+
 image:config1.png[]
 image:config2.png[]
+
+=== Pingen
+
 image:ping1.png[]
 image:ping2.png[]
 image:ping3.png[]
@@ -129,6 +134,7 @@ image:ping3.png[]
 ** da0 - Harddisk 15gb
 
 === Nach der Installation:
+
 ** user: root
 ** password: firewall
 ** IP-Address (manuel): 10.9.7.178
@@ -139,9 +145,11 @@ image:ping3.png[]
 ** don't reset GUI defaults
 
 image:configFirewallNetwork.png[]
+
 WICHTIG: das Interface muss 2 mal hinzugefügt werden!
 
 === installation WAN
+
 ** no DHCP
 ** IP-Address: 10.9.7.244
 ** WAN IPv4 upstream gateway address: 10.9.7.254
@@ -150,6 +158,11 @@ WICHTIG: das Interface muss 2 mal hinzugefügt werden!
 ** don't change https to http
 ** don't generate a new self-signed certificate
 ** don't reset GUI defaults
+
+=== Einstellungen NAT-Rules
+
+** Einstellungen müssen geändert werden, um die "anti-lockout-rule" zu umgehen
+
 
 
 
