@@ -11,7 +11,7 @@ Hofer Jakob, Pölderl Laurin, Kraml Friedrich
 :url-repo: https://github.com/SIMULATAN/NWT-Project-2023
 :imagesdir: ../img
 
-Unser Netzwerk ist nur über LAN erreichbar!
+Unser Netzwerk ist nicht mehr nur über LAN erreichbar!
 
 * Team:
 
@@ -19,11 +19,11 @@ Unser Netzwerk ist nur über LAN erreichbar!
 - Pölderl Laurin
 - Kraml Friedrich
 
-* Version: 1.0.3
+* Version: 1.0.4
 
-* Version Date: 22-05-2023
+* Version Date: 12-06-2023
 
-* Version Notes: Bearbeiten der Firewall (Fehlersuche)
+* Version Notes: FCAPS; Proxy; Firewall
 
 * Author:
 
@@ -37,6 +37,7 @@ ___
 == Desktop VM
 
 ** CT-ID: 780187
+** VNC
 ** Password: bluhh
 ** IP 10.9.7.187
 ** Sprache (Keyboard Layout): German
@@ -162,35 +163,75 @@ WICHTIG: das Interface muss 2 mal hinzugefügt werden!
 === Einstellungen NAT-Rules
 
 ** Einstellungen müssen geändert werden, um die "anti-lockout-rule" zu umgehen
+** Source LAN
+** Destination WAN
+** Interface LAN
+** Redirect Target IP: ...
+
+image:portForward.png[]
+Port Forward
+
+=== Interface Configurations:
+
+image:lanInterface.png[]
+LAN Interface
+
+image:wanInterface.png[]
+WAN Interface
+
+== Proxy
+
+link:../docker/proxy/docker-compose.yml[docker-compose (Proxy- Infos)]
+
+== FCAPS
+
+ISO Modell für Netzwerkmanagement
+
+Abkürzung für:
+
+- Fault Management
+Erkennen, Isolieren, Beheben und Protokollieren von Fehlern
+
+Als Schüler habe ich möglicherweise wenig Einfluss auf das Störungsmanagement im schulischen Kontext.
+Wenn jedoch technische Probleme auftreten, wie z.B. ein Serverausfall, ist es wichtig, dass die Schule
+über ein effektives Fault Management verfügt, um diese Probleme schnell zu beheben und den
+Unterrichtsablauf nicht zu beeinträchtigen.
 
 
+- Configuration Management
+Sammeln und speichern von Konfigurationen von Netzkomponenten
+Vereinfachen der Konfiguration einer Netzkomponente
+
+Im schulischen Umfeld kann das Configuration Management darauf abzielen, die IT-Infrastruktur
+und die Geräte so einzurichten und zu verwalten, dass sie den Anforderungen der Schüler und Lehrer
+entsprechen. Dies könnte die Bereitstellung von Laptops, die Konfiguration von Software und die
+Verwaltung von Zugriffsrechten umfassen, um sicherzustellen, dass die richtigen Ressourcen den
+richtigen Personen zur Verfügung stehen.
 
 
+- Accounting Management
+Statistiken über die Verwendung von Netzressourcen
+zur Abrechnung von Kosten
+
+Für Schüler ist das Accounting Management möglicherweise nicht so relevant. Es kann jedoch
+von Bedeutung sein, wenn es darum geht, die Nutzung von IT-Ressourcen wie Druckern oder
+Kopierern zu überwachen und möglicherweise die Kosten zuzuordnen.
+In der IT-Medientechnik wird auch ein Account-System für den Zugang zu den Studios verwendet,
+um bei Schäden nachvollziehen zu können, wer zu dem jeweiligen Zeitpunkt im Raum war.
 
 
+- Performance Management
+Stabilität des Netzes wird überwacht
 
+Als Schüler möchte ich sicherstellen, dass die IT-Systeme der Schule eine gute Leistung erbringen.
+Eine schlechte Leistung könnte den Unterricht behindern oder die Nutzung von Online-Ressourcen
+einschränken. Daher ist es wichtig, dass die Schule über ein effektives Performance Management
+verfügt, um Engpässe oder Performance-Probleme frühzeitig zu erkennen und zu beheben.
 
+- Security Management
+Identifikation und Bewältigung von Risiken im Netz
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Als Schüler möchte ich sicherstellen, dass meine persönlichen Daten und Informationen geschützt sind.
+Das Security Management ist daher von großer Bedeutung. Eine gute Sicherheitsinfrastruktur in der Schule
+gewährleistet den Schutz vor unautorisiertem Zugriff, Viren oder anderen Bedrohungen, die meine Daten
+gefährden könnten.
